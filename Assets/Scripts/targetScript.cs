@@ -17,7 +17,7 @@ public class targetScript : MonoBehaviour
     }
 
 
-
+    //残りターゲット数のUI変更
     private void OnDestroy()
     {
         _gameControllerScript.changeTargetText();

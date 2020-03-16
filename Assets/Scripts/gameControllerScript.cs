@@ -38,6 +38,7 @@ public class gameControllerScript : MonoBehaviour
         time_text.text = "Time : " + (ElapseTime).ToString("F1");
     }
 
+    //残りターゲット数のUIを変更
     public void changeTargetText()
     {
         if (target_text != null)
@@ -51,18 +52,22 @@ public class gameControllerScript : MonoBehaviour
         }
     }
 
+    //ゲームクリア
     public void GameComplete()
     {
+        //クリアタイム取得
         float resultTime = ElapseTime;
 
+        //ゲーム中のUI非表示
         time.SetActive(false);
         remainingTarget.SetActive(false);
-
-        resultPanel.SetActive(true);
-        result_text.text = "YourTime : " + (resultTime).ToString("F1") + "s";
         tipsPanel.SetActive(false);
 
-        
+        //リザルト画面表示
+        resultPanel.SetActive(true);
+        result_text.text = "YourTime : " + (resultTime).ToString("F1") + "s";
+
+        //動きを止める
         Time.timeScale = 0;
         
     }

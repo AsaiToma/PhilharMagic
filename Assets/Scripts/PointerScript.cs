@@ -95,7 +95,7 @@ public class PointerScript : MonoBehaviour
 
 
 
-
+    //火球を飛ばす方向を返す
     public Vector3 MagicDirection()
     {
         switch (directionType)
